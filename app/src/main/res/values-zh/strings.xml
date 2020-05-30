@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">android labs</string>
+    <string name="app_name">android lab2-STEP2</string>
     <string name= "hello_message">你好!</string>
-    <string name="Button_Text">我是个按钮</string>
+    <string name="Button_Text">按这里</string>
+    <string name="GUI_message">看看我的 GUI</string>
+    <string name="switch_message">开/关</string>
+    <string name="EditTextHint">由此输入</string>
+    <string name="cb_message">点选这里！</string>
 </resources>
