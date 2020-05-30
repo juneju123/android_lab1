@@ -17,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_grid);
         CheckBox cb = findViewById(R.id.cb);
         String s = cb.getResources().getString(R.string.toast_message);
-        String onOff=cb.isChecked()?" on":" off";
+        String on = cb.getResources().getString(R.string.on);
+        String off = cb.getResources().getString(R.string.off);
+        String onOff=cb.isChecked()?on :off;
         boolean b = cb.isChecked();
         cb.setOnClickListener(e -> Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show());
         cb.setOnCheckedChangeListener((c, isChecked) -> {
