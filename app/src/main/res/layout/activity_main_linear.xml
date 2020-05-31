@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
 
     tools:context=".MainActivity">
 
@@ -13,47 +13,52 @@
         android:layout_height="wrap_content"
         android:text="@string/GUI_message"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content">  
+        />
+     
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="fill"
-        android:text="@string/Button_Text" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">  
 
-    <CheckBox
-        android:id="@+id/cb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:gravity="fill"
-        android:text="@string/cb_message" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
 
-            
-        </LinearLayout>
+            android:layout_gravity="fill"
+            android:text="@string/Button_Text" />
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="fill"
+            android:text="@string/cb_message" />
+
+                
+            
+    </LinearLayout>
 
      <LinearLayout
     android:layout_height="wrap_content"
     android:layout_width="wrap_content">  
 
     <ImageButton
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:layout_weight="1"
+        android:background="#00000000"
         android:src="@drawable/flag" />
 
     <Switch
         android:id="@+id/switchBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_gravity="fill"
+        android:layout_weight="1"
         android:text="@string/switch_massge" />
      </LinearLayout>
 

@@ -7,4 +7,8 @@
     <string name="switch_massge">开/关</string>
     <string name="EditTextHint">在此输入</string>
     <string name="toast_message" >此处有更多信息</string>
+    <string name="on">打开</string>
+    <string name="off">关闭</string>
+    <string name="snackbar_msg">开关现在已 </string>
+    <string name="undo">撤销</string>
 </resources>
