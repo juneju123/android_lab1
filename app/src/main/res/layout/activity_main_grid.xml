@@ -20,25 +20,27 @@ tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn"
-        android:layout_below="@+id/textview"
-        android:gravity="fill_horizontal"
-        android:text="@string/Button_Text"
+        android:layout_width="201dp"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        android:layout_below="@+id/textview"
+        android:layout_marginTop="0dp"
+        android:gravity="fill_horizontal"
+        android:text="@string/Button_Text" />
+
     <CheckBox
 
         android:id="@+id/cb"
-      android:layout_toEndOf="@+id/btn"
+        android:layout_width="184dp"
+        android:layout_height="62dp"
         android:layout_below="@+id/textview"
+        android:layout_toEndOf="@+id/btn"
         android:gravity="fill_horizontal"
-        android:text="@string/cb_message"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        android:text="@string/cb_message" />
 
 
     <ImageButton
         android:id="@+id/imgBtn"
-
+        android:background="#00000000"
         android:layout_below="@id/btn"
         android:src="@drawable/flag"
         android:layout_height="wrap_content"
@@ -46,13 +48,13 @@ tools:context=".MainActivity">
 
     <Switch
         android:id="@+id/switchBtn"
-        android:layout_toEndOf="@id/imgBtn"
-android:layout_marginTop="1dp"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
 
         android:layout_below="@id/cb"
-        android:text="@string/switch_message"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@id/imgBtn"
+        android:text="@string/switch_message" />
 
 
     <EditText

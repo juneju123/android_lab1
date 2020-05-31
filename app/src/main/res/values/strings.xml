@@ -9,4 +9,6 @@
     <string name="toast_message">Here is more information</string>
     <string name="on">on</string>
     <string name="off">off</string>
+    <string name="snackbar_msg">The switch is now </string>
+    <string name="undo">undo</string>
 </resources>
