@@ -31,7 +31,9 @@ tools:context=".MainActivity">
     <ImageButton
         android:layout_gravity="fill_horizontal"
         android:layout_columnSpan="1"
+        android:background="#00000000"
         android:src="@drawable/flag" />
+
 
     <Switch
         android:id="@+id/switchBtn"

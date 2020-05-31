@@ -7,5 +7,9 @@
     <string name="switch_message">开/关</string>
     <string name="EditTextHint">由此输入</string>
     <string name="cb_message">点选这里！</string>
-    <string name="toast_message">Here is more information</string>
+    <string name="toast_message">此处有更多信息</string>
+    <string name="on">打开</string>
+    <string name="off">关闭</string>
+    <string name="snackbar_msg">按钮已 </string>
+    <string name="undo">撤销</string>
 </resources>
