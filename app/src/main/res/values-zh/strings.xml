@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">android lab2-STEP2</string>
+    <string name="app_name">android lab2-STEP3</string>
     <string name= "hello_message">你好!</string>
     <string name="Button_Text">按这里</string>
     <string name="GUI_message">看看我的 GUI</string>

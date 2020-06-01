@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:layout_gravity="fill"
-    android:columnCount="2"
-    android:rowCount="4"
-
-tools:context=".MainActivity">
-
-<TextView
-    android:id="@+id/textview"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/GUI_message"
-    android:textSize="30dp"
-    />
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GUI_message"
+        android:textSize="30dp" />
+
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="201dp"
+        android:layout_below="@id/textview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textview"
-        android:layout_marginTop="0dp"
-        android:gravity="fill_horizontal"
+        android:layout_alignRight="@id/view1"
         android:text="@string/Button_Text" />
 
-    <CheckBox
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_alignTop="@id/btn"
+        android:layout_centerHorizontal="true"
+        android:layout_height="0dp" />
 
+    <CheckBox
         android:id="@+id/cb"
-        android:layout_width="184dp"
-        android:layout_height="62dp"
-        android:layout_below="@+id/textview"
-        android:layout_toEndOf="@+id/btn"
-        android:gravity="fill_horizontal"
+        android:layout_alignTop="@id/btn"
+        android:layout_alignBottom="@id/btn"
+        android:layout_toRightOf="@id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/cb_message" />
 
 
     <ImageButton
-        android:id="@+id/imgBtn"
-        android:background="#00000000"
+        android:id="@+id/imageBtn"
         android:layout_below="@id/btn"
-        android:src="@drawable/flag"
+        android:layout_width="wrap_content"
+        android:layout_alignRight="@id/view2"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        android:padding="0dp"
+        android:src="@drawable/flag" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/imageBtn"
+        android:layout_centerHorizontal="true"/>
 
     <Switch
         android:id="@+id/switchBtn"
-        android:layout_width="181dp"
+        android:layout_toRightOf="@id/view2"
+        android:layout_alignTop="@id/imageBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_below="@id/cb"
-        android:layout_marginTop="1dp"
-        android:layout_toEndOf="@id/imgBtn"
         android:text="@string/switch_message" />
 
 
     <EditText
-      android:layout_below="@+id/imgBtn"
-android:layout_gravity="fill_horizontal"
-        android:hint="@string/EditTextHint"
-        android:inputType="textPersonName"
+        android:layout_below="@id/imageBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent" />
+        android:hint="@string/EditTextHint"
+        android:inputType="textPersonName" />
+
 </RelativeLayout>
