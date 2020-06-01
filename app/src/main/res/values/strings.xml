@@ -3,7 +3,7 @@
     <string name="Button_Text">CLICK HERE</string>
     <string name="GUI_message">Look at my GUI</string>
     <string name="cb_message">Check this out!</string>
-    <string name="switch_massge">Swictch on/off</string>
+    <string name="switch_massge">Switch on/off</string>
     <string name="EditTextHint">Type here</string>
     <string name="toast_message">Here is more information</string>
     <string name="on"> on</string>
