@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_grid);
+        setContentView(R.layout.activity_main_relative);
         CheckBox cb = findViewById(R.id.cb);
         String s = cb.getResources().getString(R.string.toast_message);
         cb.setOnClickListener(e -> Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show());
