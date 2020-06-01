@@ -18,6 +18,7 @@ tools:context=".MainActivity">
     android:textSize="30dp"
     />
     <Button
+        android:id="@+id/button"
         android:layout_gravity="fill"
         android:layout_columnSpan="1"
         android:text="@string/Button_Text"></Button>
