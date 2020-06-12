@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">android labs</string>
-    <string name= "hello_message">你好!</string>
-    <string name="Button_Text">我是个按钮</string>
+    <string name="app_name">android lab3</string>
+
+    <string name="Button_Text">登录</string>
+    <string name="entermsg">输入您的邮箱</string>
+    <string name="Email_hint">在此输入邮箱</string>
+    <string name="passwordtxt">输入密码</string>
+    <string name="your_profile">your profile</string>
+    <string name="your_name">your name</string>
+    <string name="name_field">Enter your name</string>
+    <string name="your_Email">your_Email</string>
+    <string name="Your_Picture">Your Picture</string>
+    <string name="takeImg">Click the button above to take a picture</string>
+    <string name="gotoChat">Go to chat</string>
 </resources>
