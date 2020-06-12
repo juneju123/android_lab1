@@ -6,11 +6,11 @@
     <string name="entermsg">输入您的邮箱</string>
     <string name="Email_hint">在此输入邮箱</string>
     <string name="passwordtxt">输入密码</string>
-    <string name="your_profile">your profile</string>
-    <string name="your_name">your name</string>
-    <string name="name_field">Enter your name</string>
-    <string name="your_Email">your_Email</string>
-    <string name="Your_Picture">Your Picture</string>
-    <string name="takeImg">Click the button above to take a picture</string>
-    <string name="gotoChat">Go to chat</string>
+    <string name="your_profile">你的文档</string>
+    <string name="your_name">你的名字</string>
+    <string name="name_field">输入你的名字</string>
+    <string name="your_Email">你的邮箱</string>
+    <string name="Your_Picture">你的照片</string>
+    <string name="takeImg">按下按钮拍照</string>
+    <string name="gotoChat">去聊天</string>
 </resources>
