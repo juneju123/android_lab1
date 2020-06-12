@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -25,12 +26,18 @@ public class ProfileActivity extends AppCompatActivity {
         mImageButton.setOnClickListener(btn ->dispatchTakePictureIntent());
         Intent fromMain = getIntent();
         EmailField.setText(fromMain.getStringExtra("Email"));
+        Button goToChatBtn = findViewById(R.id.goToChat);
+        goToChatBtn.setOnClickListener(btn -> {
+            Intent goToChat = new Intent(ProfileActivity.this,ChatRoomActivity.class);
+            startActivity(goToChat);
+        });
     }
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
