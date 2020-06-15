@@ -34,7 +34,8 @@
             android:layout_weight="1"
             android:gravity="bottom"
             android:layout_gravity="bottom"
-            android:hint="@string/TypeHere"/>
+            android:hint="@string/TypeHere"
+            android:id="@+id/userInput"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
