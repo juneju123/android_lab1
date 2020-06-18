@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/receiveTV"
+        android:id="@+id/receive_msg"
         android:drawableLeft="@drawable/row_receive"
         android:text="receive message"></TextView>
 
