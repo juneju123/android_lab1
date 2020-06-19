@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -58,7 +59,16 @@ public class ChatRoomActivity extends AppCompatActivity {
             adapter.notifyDataSetChanged();
             userInput.setText("");
         });
+    msgListView.setOnItemClickListener((parent, view, position, id) -> {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Do you want to delete this?").setMessage("The select row is "+position+
+                " \n id in the database is "+id).setPositiveButton("Yes",(click,arg)->{
+                    msgList.remove(position);
+                    adapter.notifyDataSetChanged();
+        }).setNegativeButton("No",(click,arg)->{
 
+        }).create().show();
+    });
 
 
 

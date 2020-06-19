@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">android labs</string>
+    <string name="app_name">android lab4</string>
 
     <string name="Button_Text">Login</string>
     <string name="entermsg">Enter your email address</string>
