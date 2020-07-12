@@ -38,11 +38,11 @@ public class WeatherForecast extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather_forecast);
+        setContentView(R.layout.activity_weather_forecast2);
         pb = findViewById(R.id.pb);
         pb.setVisibility(View.VISIBLE);
         ForecastQuery req = new ForecastQuery();
-        req.execute("http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=7e943c97096a9784391a981c4d878b22&mode=xml&units=metric");
+        req.execute("https://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=7e943c97096a9784391a981c4d878b22&mode=xml&units=metric");
         currentTempTxt = findViewById(R.id.currentTemp);
         minTxt = findViewById(R.id.minTemp);
         maxTxt = findViewById(R.id.maxTemp);
@@ -93,7 +93,7 @@ public class WeatherForecast extends AppCompatActivity {
                             publishProgress(75);
                         }else if(xpp.getName().equals("weather")){
                             iconName = xpp.getAttributeValue(null, "icon");
-                            urlString = "http://openweathermap.org/img/w/" + iconName + ".png";
+                            urlString = "https://openweathermap.org/img/w/" + iconName + ".png";
                         }
                     }
                     eventType = xpp.next(); //move to the next xml event and store it in a variable
@@ -119,7 +119,7 @@ public class WeatherForecast extends AppCompatActivity {
                     outputStream.close();
                 }
                 Log.i("File name: "+fileName, "if exists locally: " + fileExistance(fileName));
-                URL uvUrl = new URL("http://api.openweathermap.org/data/2.5/uvi?appid=7e943c97096a9784391a981c4d878b22&lat=45.348945&lon=-75.759389");
+                URL uvUrl = new URL("https://api.openweathermap.org/data/2.5/uvi?appid=7e943c97096a9784391a981c4d878b22&lat=45.348945&lon=-75.759389");
                 urlConnection = (HttpURLConnection) uvUrl.openConnection();
                 // urlConnection.connect();
                 InputStream uvResponse = urlConnection.getInputStream();
