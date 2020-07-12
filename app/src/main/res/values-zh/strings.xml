@@ -16,4 +16,8 @@
     <string name="TypeHere">Type Here</string>
     <string name="receiveBtn_Text">RECEIVE</string>
     <string name="gotoWeatherForcast"></string>
+    <string name="max">Today\'s max temperature is</string>
+    <string name="min">\"Today\'s minimum temperature is \"</string>
+    <string name="uv">\"UV rate is \"</string>
+    <string name="temp">Current teperature:</string>
 </resources>
