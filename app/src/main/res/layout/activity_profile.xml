@@ -5,6 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp"
     tools:context=".ProfileActivity">
     <TextView
         android:layout_width="match_parent"
@@ -14,13 +18,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/your_name"/>
+        android:text="@string/your_name"
+        android:id="@+id/nameTV"/>
     <EditText
         android:id="@+id/name_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/name_field"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName"
+        android:nextFocusDown="@id/Email_et"
+        android:nextFocusUp="@id/nameTV"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Email_hint"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:nextFocusDown="@id/imgBtn"
+        android:nextFocusUp="@id/name_et"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,6 +49,8 @@
         android:id="@+id/imgBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:nextFocusDown="@id/goToChat"
+        android:nextFocusUp="@id/Email_et"
         android:src="@android:drawable/picture_frame"
         />
     <TextView
@@ -51,7 +62,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/gotoChat"
-        android:id="@+id/goToChat"/>
+        android:id="@+id/goToChat"
+        android:nextFocusDown="@id/goToWeaBTN"
+        android:nextFocusUp="@id/imgBtn"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
