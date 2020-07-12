@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">android lab5</string>
+    <string name="app_name">android lab6</string>
 
     <string name="Button_Text">Login</string>
     <string name="entermsg">Enter your email address</string>
@@ -14,4 +14,5 @@
     <string name="gotoChat">Go to chat</string>
     <string name="TypeHere">Type Here</string>
     <string name="receiveBtn_Text">RECEIVE</string>
+    <string name="gotoWeatherForcast">Go To Weather Forcast</string>
 </resources>
