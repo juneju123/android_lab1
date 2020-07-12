@@ -26,7 +26,7 @@
             android:gravity="bottom"
             android:layout_gravity="bottom"
             android:id="@+id/sendBtn"
-            android:text="SEND"
+            android:text="@string/send"
         />
         <EditText
             android:layout_width="wrap_content"

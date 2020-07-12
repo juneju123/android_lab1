@@ -16,4 +16,5 @@
     <string name="TypeHere">点击此处</string>
     <string name="receiveBtn_Text">接收</string>
     <string name="gotoWeatherForcast">查看天气</string>
+    <string name="send">send</string>
 </resources>

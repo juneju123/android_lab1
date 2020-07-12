@@ -15,4 +15,5 @@
     <string name="TypeHere">Type Here</string>
     <string name="receiveBtn_Text">RECEIVE</string>
     <string name="gotoWeatherForcast">Go To Weather Forcast</string>
+    <string name="send">send</string>
 </resources>
