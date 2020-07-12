@@ -13,7 +13,7 @@
     <string name="Your_Picture">你的照片</string>
     <string name="takeImg">按下按钮拍照</string>
     <string name="gotoChat">去聊天</string>
-    <string name="TypeHere">Type Here</string>
-    <string name="receiveBtn_Text">RECEIVE</string>
-    <string name="gotoWeatherForcast"></string>
+    <string name="TypeHere">点击此处</string>
+    <string name="receiveBtn_Text">接收</string>
+    <string name="gotoWeatherForcast">查看天气</string>
 </resources>
