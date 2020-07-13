@@ -13,8 +13,8 @@
     <string name="Your_Picture">你的照片</string>
     <string name="takeImg">按下按钮拍照</string>
     <string name="gotoChat">去聊天</string>
-    <string name="TypeHere">Type Here</string>
-    <string name="receiveBtn_Text">RECEIVE</string>
+    <string name="TypeHere">在此输入</string>
+    <string name="receiveBtn_Text">接收</string>
     <string name="gotoWeatherForcast"></string>
     <string name="max">今天的最高温度是</string>
     <string name="min">今天的最低温度是 \"</string>
