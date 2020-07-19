@@ -2,6 +2,7 @@ package com.example.androidlabs;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,6 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.net.IDN;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +42,9 @@ public class ChatRoomActivity extends AppCompatActivity {
     private List<Msg> msgList = new ArrayList<Msg>();
 
     private SQLiteDatabase db;
+    public static final String MSG = "MESSAGE";
+    public static final String MSG_ID = "POSITION";
+    public static final String MSG_SEND_RECIEVE = "SEND_RECIEVE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat_room);
         msgListView = (ListView)findViewById(R.id.lv) ;
         userInput = findViewById(R.id.userInput);
+        boolean isTablet = findViewById(R.id.fragmentLocation) != null;
         adapter = new MsgAdapter();
         msgListView.setAdapter(adapter);
         loadDataFromDatabase();
@@ -75,7 +81,37 @@ public class ChatRoomActivity extends AppCompatActivity {
             adapter.notifyDataSetChanged();
             userInput.setText("");
         });
-    msgListView.setOnItemClickListener((parent, view, position, id) -> {
+
+
+        msgListView.setOnItemClickListener((list, item, position, id) -> {
+            //Create a bundle to pass data to the new fragment
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString(MSG, msgList.get(position).getContent() );
+            dataToPass.putLong(MSG_ID, id);
+           if(msgList.get(position).isRecieved()){
+               dataToPass.putString(MSG_SEND_RECIEVE,getResources().getString(R.string.isRecievedMSG));
+           }else {
+               dataToPass.putString(MSG_SEND_RECIEVE,"Is a SEND message");
+           }
+
+            if(isTablet)
+            {
+                DetailsFragment dFragment = new DetailsFragment(); //add a DetailFragment
+                dFragment.setArguments( dataToPass ); //pass it a bundle for information
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentLocation, dFragment) //Add the fragment in FrameLayout
+                        .commit(); //actually load the fragment. Calls onCreate() in DetailFragment
+            }
+            else //isPhone
+            {
+
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                nextActivity.putExtras(dataToPass); //send data to next activity
+                startActivity(nextActivity); //make the transition
+            }
+        });
+            msgListView.setOnItemLongClickListener((parent, view, position, id) -> {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("Do you want to delete this?").setMessage("The select row is "+ position +
                 " \n id in the database is "+ id).setPositiveButton("Yes",(click,arg)->{
@@ -85,7 +121,9 @@ public class ChatRoomActivity extends AppCompatActivity {
         }).setNegativeButton("No",(click,arg)->{
 
         }).create().show();
+        return true;
     });
+
 
 
 

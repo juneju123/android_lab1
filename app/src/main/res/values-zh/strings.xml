@@ -20,4 +20,5 @@
     <string name="min">今天的最低温度是 \"</string>
     <string name="uv">紫外线指数为</string>
     <string name="temp">当前温度为</string>
+    <string name="sendBtn_Text">send</string>
 </resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@id/rL"/>
+
+    <RelativeLayout
+        android:id="@+id/rL"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sendBtn_Text"/>
+
+        <EditText
+            android:id="@+id/userInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/sendBtn"
+            android:layout_toLeftOf="@+id/receiveBtn"
+            android:hint="@string/TypeHere"
+            />
+        <Button
+            android:id="@+id/receiveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:text="@string/receiveBtn_Text"/>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_toRightOf="@id/lv"
+        android:background="@color/colorAccent" />
+
+
+</RelativeLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">android lab6</string>
+    <string name="app_name">android lab7</string>
 
     <string name="Button_Text">Login</string>
     <string name="entermsg">Enter your email address</string>
@@ -19,4 +19,8 @@
     <string name="min">\"Today\'s minimum temperature is \"</string>
     <string name="uv">\"UV rate is \"</string>
     <string name="temp">Current teperature:</string>
+    <string name="sendBtn_Text">send</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="isRecievedMSG" translatable="false">Is a RECEIVED message</string>
 </resources>

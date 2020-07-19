@@ -5,8 +5,8 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission
-        android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WeatherForecast"></activity>
+        <activity android:name=".EmptyActivity"></activity>
+        <activity android:name=".WeatherForecast" />
         <activity android:name=".ChatRoomActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivity">
