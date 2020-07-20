@@ -118,6 +118,11 @@ public class ChatRoomActivity extends AppCompatActivity {
                    db.delete(MyOpener.TABLE_NAME,MyOpener.COL_ID + "=?",new String[]{Long.toString(msgList.get(position).getId())});
                     msgList.remove(position);
                     adapter.notifyDataSetChanged();
+            if (isTablet) {
+                if (getSupportFragmentManager().findFragmentById(R.id.fragmentLocation) != null)
+                    getSupportFragmentManager().beginTransaction().remove(getSupportFragmentManager().findFragmentById(R.id.fragmentLocation)).commit();
+            }
+
         }).setNegativeButton("No",(click,arg)->{
 
         }).create().show();
